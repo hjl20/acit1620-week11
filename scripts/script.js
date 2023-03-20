@@ -13,15 +13,22 @@
 
 // greet('john')
 
+const radiusPara = document.querySelector("#radius")
+const resultPara = document.querySelector("#result")
+console.log(radiusPara)
+console.log(resultPara)
 
 const calcCircleArea = radius => {
     if (isNaN(radius)) {
-        alert("This is not a number")
+        resultPara.textContent = "Error: radius is not a number"
     }
     else {
-        return Math.PI * radius**2
+        area = (Math.PI * radius**2).toFixed(2)
+        radiusPara.textContent = `The radius given is: ${radius}`
+        resultPara.textContent = `The area of a circle with radius ${radius} is: ${area}`
+        return area
     }
 }
 
 let radius = prompt("Enter a radius:")
-alert(`The area of a circle with radius ${radius} is ${calcCircleArea(radius).toFixed(2)}`)
+calcCircleArea(radius)
