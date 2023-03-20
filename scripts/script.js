@@ -15,7 +15,13 @@
 
 
 const calcCircleArea = radius => {
-    alert(`The area of a circle with radius ${radius} is ${(Math.PI * radius**2).toFixed(2)}`)
+    if (isNaN(radius)) {
+        alert("This is not a number")
+    }
+    else {
+        return Math.PI * radius**2
+    }
 }
 
-calcCircleArea(prompt("Enter a radius: "))
+let radius = prompt("Enter a radius:")
+alert(`The area of a circle with radius ${radius} is ${calcCircleArea(radius).toFixed(2)}`)
