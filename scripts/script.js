@@ -48,3 +48,10 @@ const populateShoppingList = arrayItems => {
 
 const myList = ["cheese", "bread", "green pepper"]
 populateShoppingList(myList)
+
+const toSquareListStyle = () => {
+    ul.classList.add("squareList")
+    ul.classList.remove("circleList")
+}
+
+toSquareListStyle()
