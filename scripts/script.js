@@ -19,12 +19,12 @@ console.log(radiusPara)
 console.log(resultPara)
 
 const calcCircleArea = radius => {
+    radiusPara.textContent = radiusPara.textContent.concat(` is: ${radius}`)   
     if (isNaN(radius)) {
-        resultPara.textContent = "Error: radius is not a number"
+        resultPara.textContent = `Error: ${radius} is not a number`
     }
     else {
         area = (Math.PI * radius**2).toFixed(2)
-        radiusPara.textContent = `The radius given is: ${radius}`
         resultPara.textContent = `The area of a circle with radius ${radius} is: ${area}`
         return area
     }
@@ -32,3 +32,6 @@ const calcCircleArea = radius => {
 
 let radius = prompt("Enter a radius:")
 calcCircleArea(radius)
+
+
+
