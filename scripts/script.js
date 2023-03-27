@@ -55,3 +55,14 @@ const toSquareListStyle = () => {
 }
 
 toSquareListStyle()
+
+function updateImage() {
+    imgSrc = 'https://cdn-icons-png.flaticon.com/512/263/263142.png'
+    const image = document.querySelector("#shoppingCart")
+    image.setAttribute("src", imgSrc)
+    image.setAttribute("alt", "shopping cart")
+    image.setAttribute("width", 150)
+    image.setAttribute("height", 150)
+}
+
+updateImage()
